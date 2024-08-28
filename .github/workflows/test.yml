@@ -10,7 +10,7 @@ jobs:
         name: containerization
         permissions:
           packages: write
-        runs-on: shazly_runner
+        runs-on: self-hosted
         steps:
           - name: checkout
             uses: actions/checkout@v4
