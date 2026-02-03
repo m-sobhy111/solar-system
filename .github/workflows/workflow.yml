@@ -36,9 +36,11 @@ jobs:
               run: npm install
 
             - name: Unit Testing
+              id: hamada
               run: npm test
 
             - name: Archive test result
+              if: steps.hamada.outcome == 'failure' || steps.hamada.outcome == 'success'
               uses: actions/upload-artifact@v6
               with:
                 name: Mocha-Test-Result
