@@ -58,7 +58,7 @@ app.get('/',   async (req, res) => {
 
 
 app.get('/os',   function(req, res) {
-    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Content-Type', 'applicationnnn/json');
     res.send({
         "os": OS.hostname(),
         "env": process.env.NODE_ENV
