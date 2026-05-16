@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '/')));
 app.use(cors())
 
 mongoose.connect(process.env.MONGO_URI, {
-    user: process.env.MONGO_USERNAME,
+    user: process.env.MONGO_USERNAMEE,
     pass: process.env.MONGO_PASSWORD,
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -58,7 +58,7 @@ app.get('/',   async (req, res) => {
 
 
 app.get('/os',   function(req, res) {
-    res.setHeader('Content-Type', 'applicationnnn/json');
+    res.setHeader('Content-Type', 'application/json');
     res.send({
         "os": OS.hostname(),
         "env": process.env.NODE_ENV
